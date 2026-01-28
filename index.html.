@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajude um Cachorrinho Resgatado 🐶</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            background: #ffffff;
+            max-width: 420px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #ff914d;
+        }
+        p {
+            color: #555;
+        }
+        img {
+            width: 220px;
+            margin: 20px 0;
+        }
+        .pix-box {
+            background: #f1f1f1;
+            padding: 12px;
+            border-radius: 8px;
+            word-break: break-all;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #ff914d;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e87f3d;
+        }
+        footer {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🐾 Ajude um Cachorrinho</h1>
+
+    <p>
+        Esse cachorrinho foi resgatado da rua e precisa da sua ajuda
+        para ter alimento e cuidados básicos.
+    </p>
+
+    <h2>💛 Doe via Pix</h2>
+
+    <!-- QR CODE PIX -->
+    <img 
+        src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=bb2f302a-3aa5-4c18-8674-60bee55c0833"
+        alt="QR Code Pix">
+
+    <p><strong>Pix Copia e Cola:</strong></p>
+
+    <div class="pix-box" id="pixCode">
+        bb2f302a-3aa5-4c18-8674-60bee55c0833
+    </div>
+
+    <button onclick="copiarPix()">Copiar Pix</button>
+
+    <footer>
+        Qualquer valor ajuda 🐶💛  
+        Muito obrigado por apoiar essa causa!
+    </footer>
+</div>
+
+<script>
+function copiarPix() {
+    const pix = document.getElementById("pixCode").innerText;
+    navigator.clipboard.writeText(pix);
+    alert("Pix copiado com sucesso! 💛");
+}
+</script>
+
+</body>
+</html>
